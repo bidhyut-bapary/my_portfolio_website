@@ -189,33 +189,32 @@
           </div>
         </div>
 
-        <form
-          action="https://formspree.io/f/xblzpzgj"
-          method="POST"
-          class="contact-form"
-          id="contactForm"
-        >
-          <div class="form-group">
-            <input type="text" name="name" required />
-            <label>Your Name</label>
-          </div>
+ <form action="https://formspree.io/f/xblzpzgj" method="POST" class="contact-form" id="contactForm">
+  
+  <div class="form-group">
+    <input type="text" name="name" required />
+    <label>Your Name</label>
+  </div>
 
-          <div class="form-group">
-            <input type="email" name="email" required />
-            <label>Your Email</label>
-          </div>
+  <div class="form-group">
+    <input type="email" name="email" required />
+    <label>Your Email</label>
+  </div>
 
-          <div class="form-group">
-            <textarea name="message" rows="5" required></textarea>
-            <label>Your Message</label>
-          </div>
+  <div class="form-group">
+    <textarea name="message" rows="5" required></textarea>
+    <label>Your Message</label>
+  </div>
 
-          <button type="submit" class="btn btn-primary">Send Message</button>
+  <button type="submit" class="btn btn-primary" id="submitBtn">
+    Send Message
+  </button>
 
-          <p id="successMsg" class="success">
-            ✅ Thanks! Your message has been sent.
-          </p>
-        </form>
+  <p id="successMsg" class="success">
+    ✅ Message sent successfully!
+  </p>
+
+</form>
       </div>
     </section>
     <!-- Footer -->

@@ -202,26 +202,22 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 
 const form = document.getElementById("contactForm");
 const successMsg = document.getElementById("successMsg");
+const btn = document.getElementById("submitBtn");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const btn = form.querySelector("button");
   btn.innerText = "Sending...";
   btn.disabled = true;
 
-  const data = new FormData(form);
-
   try {
-    const response = await fetch(form.action, {
+    const res = await fetch(form.action, {
       method: "POST",
-      body: data,
-      headers: {
-        Accept: "application/json",
-      },
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
     });
 
-    if (response.ok) {
+    if (res.ok) {
       successMsg.style.display = "block";
       form.reset();
 
@@ -229,23 +225,14 @@ form.addEventListener("submit", async (e) => {
         successMsg.style.display = "none";
       }, 4000);
     } else {
-      alert("❌ Message send failed!");
+      alert("❌ Failed to send!");
     }
-  } catch (error) {
+  } catch {
     alert("⚠️ Network error!");
   }
 
   btn.innerText = "Send Message";
   btn.disabled = false;
-});
-// ===== DOWNLOAD CV =====
-document.getElementById("downloadCV").addEventListener("click", () => {
-  const cvLink =
-    "https://drive.google.com/file/d/1DJl1_FHynSFP7bG2e4hc7L0JP_eTIEYB/view?usp=sharing";
-
-  window.open(cvLink, "_blank");
-
-  showToast("Downloading CV...");
 });
 // ===== TOAST =====
 function showToast(msg) {
