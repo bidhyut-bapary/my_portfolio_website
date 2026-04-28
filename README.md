@@ -41,3 +41,38 @@ I love building real-world projects and continuously learning new skills to grow
 ---
 
 ## 📂 Project Structure
+
+my_portfolio_website/
+│── index.html
+│── style.css
+│── script.js
+│── assets/
+│ ├── images/
+│ └── icons/
+
+---
+
+## ⚙️ How to Use
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/bidhyut-bapary/my_portfolio_website.git
+Open the project folder
+Run index.html in your browser
+📌 Future Improvements
+🔐 Add authentication system
+🌍 Multi-language support
+📊 Add dynamic project filtering
+🧠 Integrate backend (Node.js / Firebase)
+🤝 Connect With Me
+GitHub: https://github.com/bidhyut-bapary
+Email: your-email@example.com
+⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
+
+📄 License
+
+This project is open-source and available under the MIT License.
+```
